@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:miriamroupas/tabs/home_tab.dart';
+import 'package:miriamroupas/widgets/custom_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -13,8 +15,10 @@ class HomeScreen extends StatelessWidget {
       controller: _pageController,
       physics: NeverScrollableScrollPhysics(), //não permite que arraste para o lado
       children: [
-        Container(color: Colors.yellow,),
-        Container(color: Colors.red,)
+        Scaffold(
+          body: HomeTab(),
+          drawer: CustomDrawer(),
+        )
       ],
     );
   }
